@@ -20,15 +20,14 @@ var swapPairs = function(head) {
     var curPair = _swapPair(curPair);
     if (prevPair != null) {
       prevPair.next.next = curPair;
+    } else {
+      head = curPair;
     }
     prevPair = curPair;
     curPair = curPair.next.next;
-    if (this.head == undefined) {
-      this.head = prevPair;
-    }
   }
 
-  return this.head;
+  return head;
 }
 
 var _swapPair = function(pair) {
