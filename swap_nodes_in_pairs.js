@@ -16,9 +16,9 @@ var swapPairs = function(head) {
   var curPair = head;
   var prevPair = null;
 
-  while (curPair != null && curPair.next !== null) {
+  while (curPair !== null && curPair.next !== null) {
     var curPair = _swapPair(curPair);
-    if (prevPair != null) {
+    if (prevPair !== null) {
       prevPair.next.next = curPair;
     } else {
       head = curPair;
